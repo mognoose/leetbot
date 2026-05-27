@@ -1,0 +1,13 @@
+services:
+  leetbot:
+    build: .
+    container_name: leetbot
+    restart: unless-stopped
+    environment:
+      # Keeps "leet o'clock" at 13:37 Finnish time instead of UTC
+      - TZ=Europe/Helsinki
+      # Read from the .env file sitting next to this compose file
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    volumes:
+      # Persist scores.json on the NAS, outside the container
+      - ./data:/app/data
