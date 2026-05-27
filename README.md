@@ -37,19 +37,6 @@ Discord bot that awards points for messages sent at **13:37** containing the wor
    npm start      # run production build
    ```
 
-## Deployment (Render - Free)
-
-1. Push code to GitHub
-2. Go to https://render.com → New → Web Service
-3. Connect your GitHub repo
-4. Settings:
-   - **Build Command:** `npm install && npm run build`
-   - **Start Command:** `npm start`
-   - **Environment Variable:** `DISCORD_TOKEN` = your bot token
-5. Deploy!
-
-**Note:** Render free tier spins down after 15min inactivity. Since scoring only happens at 13:37, set up a free cron job at https://cron-job.org to ping your Render URL daily at 13:36 to wake the bot.
-
 ## Commands
 
 - `!leet` - Show the leaderboard
